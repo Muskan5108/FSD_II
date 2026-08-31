@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6fb;
+  color: #1e293b;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 28px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+/* HEADER */
+
+.header {
+  background: white;
+  padding: 24px 28px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.header h1 {
+  margin: 0 0 7px;
+  font-size: 28px;
+}
+
+.header p {
+  margin: 0;
+  color: #64748b;
+}
+
+.status {
+  padding: 11px 18px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.optimized {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.non-optimized {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* CONTROLS */
+
+.controls {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.controls h2 {
+  margin-top: 0;
+}
+
+.toggles {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.toggles button {
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  padding: 11px 18px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.toggles button:hover {
+  transform: translateY(-1px);
+}
+
+.toggles button.active {
+  background: #1e293b;
+  color: white;
+  border-color: #1e293b;
+}
+
+.mode {
+  margin-top: 15px;
+  color: #64748b;
+}
+
+.mode strong {
+  color: #1e293b;
+}
+
+/* MONITOR */
+
+.monitor {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.monitor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.monitor-header h2 {
+  margin: 0 0 5px;
+}
+
+.monitor-header p {
+  margin: 0;
+  color: #64748b;
+}
+
+.total-renders {
+  min-width: 150px;
+  text-align: center;
+  background: #f1f5f9;
+  padding: 12px 22px;
+  border-radius: 12px;
+}
+
+.total-renders span {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.total-renders strong {
+  display: block;
+  font-size: 30px;
+  margin-top: 4px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 350px;
+  margin-top: 15px;
+}
+
+/* CALENDAR */
+
+.calendar-section {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.calendar-section h2 {
+  margin: 0 0 6px;
+}
+
+.instruction {
+  color: #64748b;
+  margin-top: 0;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.day {
+  min-height: 300px;
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 12px;
+  transition: 0.2s;
+}
+
+.day:hover {
+  border-color: #64748b;
+  background: #f1f5f9;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.day-header h2 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.day-header span {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* CARDS */
+
+.post-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 13px;
+  cursor: grab;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.06);
+  transition: 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-card:active {
+  cursor: grabbing;
+}
+
+.post-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+.post-platform {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.drag-text {
+  margin-top: 9px;
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .calendar {
+    grid-template-columns: repeat(7, 160px);
+  }
+}
