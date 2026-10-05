@@ -3,3 +3,8 @@ node_modules/
 .DS_Store
 dist/
 .vite/
+
+# Experiment 6
+Experiment-6/exp_6_code/frontend/node_modules/
+Experiment-6/exp_6_code/frontend/dist/
+Experiment-6/exp_6_code/backend/target/
